@@ -114,3 +114,4 @@ const Player = (name, symbol, color) => {
   
   document.getElementById('startGame').addEventListener('click', gameFlow);
   
+  module.exports = { gameFlow };
