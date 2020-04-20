@@ -31,6 +31,7 @@ The main goal on this project is testing the JavaScript project, like the concep
 
 - Install a text editor (if you don't have already).
 - Clone the project to your computer.
+- Jest: 'npm install --save-dev jest' to test the project.
 
 ## Authors
 
