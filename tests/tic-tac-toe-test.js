@@ -1,5 +1,5 @@
 /* eslint-disable no-sequences */
-const { gameFlow, }= require('./tic-tac-toe');
+const { gameFlow, player1, player2 }= require('./tic-tac-toe');
 
 describe('gameFlow', () => {
     it('reset function to set the position on game board', () => {
