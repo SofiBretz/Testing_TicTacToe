@@ -77,7 +77,7 @@ describe('gameFlow', () => {
         moves = 0;
       
         it('select current player', () => {
-          expect(gm.getCurrentPlayer()).toBe(playerA);
+          expect(currentPlayer.color && currentPlayer.name).toBe(player1);
         });
       
         it('player turn', () => {
