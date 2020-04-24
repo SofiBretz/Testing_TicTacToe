@@ -1,5 +1,6 @@
 /* eslint-disable no-sequences */
-const { gameFlow  } = require('./tic-tac-toe');
+const { gameFlow, winingCompositions  },
+let { playerSwitch  } = require('./tic-tac-toe');
 
 describe('gameFlow', () => {
     it('reset function to set the position on game board', () => {
@@ -47,4 +48,12 @@ describe('gameFlow', () => {
       const gameFlow = ['', '', 'X', '', 'X', '', 'X', '', ''];
       expect(gameFlow.checkWinner(winingCompositions)).toBe([3, 5, 7]);
     });
-  })
+
+    it('check that is a draw', () => {
+      let playerSwitch = ();
+      if (currentPlayer.color && currentPlayer.name) {
+        (moves > 8);
+      expect(moves).toBe(0);
+      }
+    }
+  });
