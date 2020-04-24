@@ -1,6 +1,5 @@
 /* eslint-disable no-sequences */
-const { gameFlow, winingCompositions  },
-let { playerSwitch  } = require('./tic-tac-toe');
+const { gameFlow, }= require('./tic-tac-toe');
 
 describe('gameFlow', () => {
     it('reset function to set the position on game board', () => {
@@ -56,4 +55,56 @@ describe('gameFlow', () => {
       expect(moves).toBe(0);
       }
     }
+
+    describe('players', () => {
+      it('player1', () => {
+        const currentPlayer = Player('player1', 'symbol');
+        expect(player1.name1).toBe('player1');
+        expect(player1).toBe(getMark);
+      });
+    
+      it('player2', () => {
+        const currentPlayer = Player('player2', 'symbol');
+        expect(player2.name1).toBe('player2');
+        expect(player2).toBe(getMark);
+      });
+
+      describe('checkWinner', () => {
+        const player1 = Player(currentPlayer.color, currentPlayer.symbol);
+        const player2= Player(currentPlayer.color, currentPlayer.symbol);
+        player1.array = [];
+        player2.array = [];
+        moves = 0;
+      
+        it('select current player', () => {
+          expect(gm.getCurrentPlayer()).toBe(playerA);
+        });
+      
+        it('player turn', () => {
+          const playerSwitch() => {
+            if (!player1.win) {
+          expect(playerSwitch()).toBe(player2);
+            }
+            if (!player2.win) {
+              expect(playerSwitch()).toBe(player1);
+            }
+          }
+        });
+      
+        it('game winner', () => {
+          expect(currentPlayer.win).toBe(true);
+        });
+
+
+    });
+
+
+
+
+
+
+
+
+
+
   });
