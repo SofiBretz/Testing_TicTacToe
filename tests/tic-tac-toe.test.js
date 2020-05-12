@@ -31,13 +31,19 @@ let currentPlayer = player1;
     });
   
     it('check third row for win pattern on the game board', () => {
-      const gameFlow = ['', '', '', '', '', '', 'X', 'X', 'X'];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([7, 8, 9]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[2]
+      ).toStrictEqual([7, 8, 9]);
     });
   
     it('check first column for win pattern on the game board', () => {
-      const gameFlow = ['X', '', '', 'X', '', '', 'X', '', ''];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([[1, 4, 7]]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[3]
+      ).toStrictEqual([1, 4, 7]);
     });
   
     it('check second column for win pattern on the game board', () => {
