@@ -93,15 +93,15 @@ const gameFlow = () => {
     x.addEventListener('click', getMark);
   }
 
-  const name1 = document.getElementById('player1Name').value;
-  const name2 = document.getElementById('player2Name').value;
-  const player1 = Player(name1, 'X', '#add8e6');
-  const player2 = Player(name2, 'O', '#ffa07a');
-
-  let currentPlayer = player1;
+  /*const name1 = document.getElementById('player1Name').value;
+  const name2 = document.getElementById('player2Name').value;*/
+const player1 = Player("player1", "X", "#add8e6");
+const player2 = Player("player2", "O", "#ffa07a");
+let currentPlayer = player1;
+/*
   document.getElementById(
     'gameText'
-  ).innerHTML = `<div style=color:${currentPlayer.color}>${currentPlayer.name} goes first</div>`;
+  ).innerHTML = `<div style=color:${currentPlayer.color}>${currentPlayer.name} goes first</div>`;*/
 
   let playerSwitch = () => {
     if (currentPlayer === player1) {
