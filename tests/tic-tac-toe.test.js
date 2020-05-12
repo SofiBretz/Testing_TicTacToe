@@ -7,13 +7,19 @@ let currentPlayer = player1;
 
   describe('game winning patterns', () => {
     it('check first row for win pattern on the game board', () => {
-      const gameFlow = ['X', 'X', 'X', '', '', '', '', '', ''];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([1, 2, 3]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[0]
+      ).toStrictEqual([1, 2, 3]);
     });
   
     it('check second row for win pattern on the game board', () => {
-      const gameFlow = ['', '', '', 'O', 'O', 'O', '', '', ''];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([4, 5, 6]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[0]
+      ).not.toStrictEqual([4, 5, 6]);
     });
   
     it('check third row for win pattern on the game board', () => {
