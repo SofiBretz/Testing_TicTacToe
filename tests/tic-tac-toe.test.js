@@ -55,8 +55,11 @@ let currentPlayer = player1;
     });
   
     it('check third column for win pattern on the game board', () => {
-      const gameFlow = ['', '', 'X', '', '', 'X', '', '', 'X'];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([3, 6, 9]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[5]
+      ).toStrictEqual([3, 6, 9]);
     });
   
     it('check for first diagonal win pattern on the game board', () => {
