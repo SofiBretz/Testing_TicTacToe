@@ -21,6 +21,14 @@ let currentPlayer = player1;
           .getWinPattern()[0]
       ).not.toStrictEqual([4, 5, 6]);
     });
+
+    it("check first row for win pattern on the game board", () => {
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[1]
+      ).toStrictEqual([4, 5, 6]);
+    });
   
     it('check third row for win pattern on the game board', () => {
       const gameFlow = ['', '', '', '', '', '', 'X', 'X', 'X'];
