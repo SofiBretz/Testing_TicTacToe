@@ -1,11 +1,9 @@
 /* eslint-disable no-sequences */
-const { gameFlow, player1, player2 }= require('./tic-tac-toe');
+const { gameFlow, Player }= require('./tic-tac-toe');
 
-describe('gameFlow', () => {
-    it('reset function to set the position on game board', () => {
-      expect(gameFlow.reset(winingCompositions)).toBe(gameFlow.reset='X', '', '', '', '', '', '', '', '');
-    });
-  });
+const player1 = Player("player1", "X", "#add8e6");
+const player2 = Player("player2", "O", "#ffa07a");
+let currentPlayer = player1;
 
   describe('game winning patterns', () => {
     it('check first row for win pattern on the game board', () => {
