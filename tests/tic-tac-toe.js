@@ -125,4 +125,4 @@ const gameFlow = () => {
 
 document.getElementById('startGame').addEventListener('click', gameFlow);
 
-module.exports = { gameFlow };
+module.exports = { gameFlow, Player };
