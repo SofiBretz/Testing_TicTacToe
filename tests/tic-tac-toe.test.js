@@ -71,8 +71,11 @@ let currentPlayer = player1;
     });
   
     it('check for second diagonal win pattern on the game board', () => {
-      const gameFlow = ['', '', 'X', '', 'X', '', 'X', '', ''];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([3, 5, 7]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[7]
+      ).toStrictEqual([3, 5, 7]);
     });
 
     it('check that is a draw', () => {
