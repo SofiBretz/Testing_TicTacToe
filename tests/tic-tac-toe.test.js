@@ -1,4 +1,5 @@
 /* eslint-disable no-sequences */
+/* eslint-disable no-use-before-define */
 const { gameFlow, Player } = require('./tic-tac-toe');
 
 const player1 = Player('player1', 'X', '#add8e6');
@@ -107,7 +108,7 @@ describe('game winning patterns', () => {
         it('switch player', () => {
           expect(player).toBe(player2);
         });
-        
+
         it('game winner', () => {
           player2.win = true;
           currentPlayer = player;

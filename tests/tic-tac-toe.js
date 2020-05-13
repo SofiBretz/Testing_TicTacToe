@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-sequences */
 /* eslint-disable prefer-destructuring */
+/* eslint-disable no-use-before-define */
 const Player = (name, symbol, color) => {
   const array = [];
   const win = false;
@@ -42,9 +43,9 @@ const gameFlow = () => {
     ];
     for (const x in winingCompositions) {
       if (
-        currentPlayer.array.includes(winingCompositions[x][0]) &&
-        currentPlayer.array.includes(winingCompositions[x][1]) &&
-        currentPlayer.array.includes(winingCompositions[x][2])
+        currentPlayer.array.includes(winingCompositions[x][0])
+        && currentPlayer.array.includes(winingCompositions[x][1])
+        && currentPlayer.array.includes(winingCompositions[x][2])
       ) {
         currentPlayer.win = true;
       }
@@ -58,7 +59,7 @@ const gameFlow = () => {
   const getMark = (event) => {
     currentPlayer.array.push(parseInt(event.target.id, 10));
     document.getElementById(
-      event.target.id
+      event.target.id,
     ).innerHTML = `<div style=color:${currentPlayer.color}>${currentPlayer.symbol}</div>`;
     document
       .getElementById(event.target.id)
@@ -66,7 +67,7 @@ const gameFlow = () => {
     checkWinner();
     if (currentPlayer.win) {
       document.getElementById(
-        'gameText'
+        'gameText',
       ).innerHTML = `<div style=color:${currentPlayer.color}>${currentPlayer.name} WINS!</div>`;
 
       for (const x of document.getElementsByClassName('cell')) {
@@ -80,7 +81,7 @@ const gameFlow = () => {
     playerSwitch();
     if (!player1.win && !player2.win) {
       document.getElementById(
-        'gameText'
+        'gameText',
       ).innerHTML = `<div style=color:${currentPlayer.color}>It's ${currentPlayer.name} ' s turn</div>`;
     }
     if (moves > 8) {
@@ -93,15 +94,9 @@ const gameFlow = () => {
     x.addEventListener('click', getMark);
   }
 
-  /*const name1 = document.getElementById('player1Name').value;
-  const name2 = document.getElementById('player2Name').value;*/
   const player1 = Player('player1', 'X', '#add8e6');
   const player2 = Player('player2', 'O', '#ffa07a');
   let currentPlayer = player1;
-  /*
-  document.getElementById(
-    'gameText'
-  ).innerHTML = `<div style=color:${currentPlayer.color}>${currentPlayer.name} goes first</div>`;*/
 
   let playerSwitch = () => {
     if (currentPlayer === player1) {
@@ -122,7 +117,5 @@ const gameFlow = () => {
   };
   return { checkWinner, switchPlayer };
 };
-
-document.getElementById('startGame').addEventListener('click', gameFlow);
 
 module.exports = { gameFlow, Player };
