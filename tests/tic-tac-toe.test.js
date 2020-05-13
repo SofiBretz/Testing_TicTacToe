@@ -1,5 +1,7 @@
 /* eslint-disable no-sequences */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+
 const { gameFlow, Player } = require('./tic-tac-toe');
 
 const player1 = Player('player1', 'X', '#add8e6');

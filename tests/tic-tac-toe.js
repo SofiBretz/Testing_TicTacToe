@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-sequences */
-/* eslint-disable prefer-destructuring */
 /* eslint-disable no-use-before-define */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-shadow */
+/* eslint-disable no-param-reassign */
+
 const Player = (name, symbol, color) => {
   const array = [];
   const win = false;
