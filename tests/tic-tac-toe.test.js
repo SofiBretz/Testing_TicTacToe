@@ -78,25 +78,23 @@ let currentPlayer = player1;
       ).toStrictEqual([3, 5, 7]);
     });
 
-    it('check that is a draw', () => {
-      let playerSwitch = ();
-      if (currentPlayer.color && currentPlayer.name) {
-        (moves > 8);
-      expect(moves).toBe(0);
-      }
-    }
-
     describe('players', () => {
       it('player1', () => {
-        const currentPlayer = Player('player1', 'symbol');
-        expect(player1.name1).toBe('player1');
-        expect(player1).toBe(getMark);
+        expect(player1.name).toBe("player1");
+      expect(player1.score).toBe(0);
+      expect(player1.array).toBeDefined();
+      expect(player1.win).toBe(false);
+      expect(player1.symbol).toBe("X");
+      expect(player1.color).toBe("#add8e6");
       });
     
       it('player2', () => {
-        const currentPlayer = Player('player2', 'symbol');
-        expect(player2.name1).toBe('player2');
-        expect(player2).toBe(getMark);
+        expect(player2.name).toBe("player2");
+      expect(player2.score).toBe(0);
+      expect(player2.array).toBeDefined();
+      expect(player2.win).toBe(false);
+      expect(player2.symbol).toBe("O");
+      expect(player2.color).toBe("#ffa07a");
       });
 
       describe('checkWinner', () => {
