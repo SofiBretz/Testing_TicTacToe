@@ -63,8 +63,11 @@ let currentPlayer = player1;
     });
   
     it('check for first diagonal win pattern on the game board', () => {
-      const gameFlow = ['O', '', '', '', 'O', '', '', '', 'O'];
-      expect(gameFlow.checkWinner(winingCompositions)).toBe([1, 5, 9]);
+      expect(
+        gameFlow()
+          .checkWinner()
+          .getWinPattern()[6]
+      ).toStrictEqual([1, 5, 9]);
     });
   
     it('check for second diagonal win pattern on the game board', () => {
